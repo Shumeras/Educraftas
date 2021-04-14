@@ -569,7 +569,97 @@ p
     vertical-align: top;
 }
 
-.card-no-padding
+.section-10
 {
-    padding: 0px;
+    margin-bottom: 64px;
+}
+
+.section-10-card
+{
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section-10-card-head
+{
+    margin: 48px 16px;
+}
+
+.section-10-card-body
+{
+    position: relative;
+    padding-top: 48px;
+    margin-bottom: -6px;
+
+}
+
+.section-10-card-body > svg
+{
+    width: 100%;
+}
+
+.section-10-card-img-container
+{
+    position: absolute;
+    display: inline-block;
+    left: 0%;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.section-10-astronaut
+{
+    position: relative;
+    display: inline-block;
+    right: -30%;
+    height: 120%;
+    bottom: 20%;
+}
+
+.section-10-arrow
+{
+    position: relative;
+    display: inline-block;
+    height: 18%;
+    margin-left: 25%;
+    top: -132%;
+    transform: rotate(75deg);
+}
+
+footer
+{
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer h2
+{
+    text-align: left;
+
+}
+
+.footer-container
+{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.footer-li
+{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.footer-li-text
+{
+    margin: 10px;
+}
+
+.footer-sub-text
+{
+    color: #D9DBE1;
+    font-weight: 400;
+    font-size: 14px;
 }
