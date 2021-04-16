@@ -105,11 +105,6 @@
     flex-shrink: 1;
 }
 
-.flex-wrap-reverse
-{
-    flex-wrap: wrap-reverse;
-}
-
 .extra-section-padding
 {
     padding-top: 43px;
@@ -197,7 +192,7 @@ header > *
 main
 {
     color: var(--color-background-dark);
-    scroll-snap-type: mandatory;
+    scroll-snap-type: y proximity;
 }
 
 section
@@ -284,17 +279,6 @@ p
     color: var(--color-background-dark-lighten);
 }
 
-.hero-container
-{
-    margin: 0 -6% 0 -6%;
-}
-
-.hero-container svg
-{
-    vertical-align: bottom;
-    
-}
-
 .card-container
 {
     display: flex;
@@ -354,13 +338,80 @@ p
     max-width: 64px;
 }
 
+.section-1-body
+{
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin: 26px 0px 0px -6%;
+    width: 112%;
+    height: 262px;
+    
+}
+
+.section-1-spheres
+{
+    position: relative;
+    width: 120%;
+    left: -10%;
+}
+
+.section-1-spheres-blue
+{
+    position: relative;
+}
+
+.section-1-spheres-green
+{
+    position: absolute;
+    display: inline-block;
+    right: calc(50% - 36%);
+    width: 8%;
+}
+
+.section-1-img
+{
+    position: absolute;
+    display: inline-block;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.section-1-astronaut
+{
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    left: 7%;
+    top: 10%;
+}
+
+.section-1-checklist
+{
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    left: 0%;
+    top: -10%;
+}
+
+.section-1-deadline
+{
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    right: 5%;
+    bottom: 0%;
+}
+
 .section-1 div h1
 {
     position: relative;
     z-index: 1;
 }
 
-.section-1 div div img
+.section-1-elipse
 {
     position: absolute;
     align-self: center;
@@ -415,8 +466,6 @@ p
     padding-bottom: 74px;
 }
 
-
-
 .section-5 > p
 {
     font-family: Manrope, Nunito, Arial, sans-serif;
@@ -445,7 +494,15 @@ p
 .picture-block-reverse
 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+}
+
+@media screen and (min-width: 834px)
+{
+    .picture-block-reverse
+    {
+        flex-direction: row-reverse;
+    }
 }
 
 .picture-block-text
@@ -621,7 +678,7 @@ p
 {
     position: relative;
     display: inline-block;
-    height: 18%;
+    height: 15%;
     margin-left: 25%;
     top: -132%;
     transform: rotate(75deg);
