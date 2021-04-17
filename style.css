@@ -162,6 +162,34 @@
     color: var(--color-background-light-darken);
 }
 
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.float-item-4
+{
+    animation: float 4s ease-in-out infinite;
+}
+
+.float-item-6
+{
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-item-8
+{
+    animation: float 8s ease-in-out infinite;
+}
+
+
 .sub-text
 {
     margin: 5px 0px;
