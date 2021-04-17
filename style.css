@@ -122,6 +122,8 @@
 
 .btn
 {
+    position: relative;
+    z-index: 2;
     display: block;
     padding: 10px 16px;
     border-radius: 12px;
