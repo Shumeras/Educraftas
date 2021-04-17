@@ -217,12 +217,12 @@
     
 }
 
-@media screen and (min-width: 836px) {
+@media (min-width: 836px) {
     .section-icon
     {
         position: absolute;
         display: inline-block;
-        right: 0%;
+        right: 12%;
         margin-top: -32px;
         z-index: 0;
     }
