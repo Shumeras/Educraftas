@@ -179,6 +179,7 @@
 .float-item-4
 {
     animation: float 4s ease-in-out infinite;
+    
 }
 
 .float-item-6
@@ -189,6 +190,48 @@
 .float-item-8
 {
     animation: float 8s ease-in-out infinite;
+}
+
+@keyframes fade-in
+{
+    0% {
+        transform: translatey(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+.fade-in-item
+{
+    animation-name: fade-in;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-delay: 0ms;
+}
+
+.delay-250
+{
+    animation-delay: 250ms;
+}
+
+.delay-500
+{
+    animation-delay: 500ms;
+}
+
+.on-in-view-animation
+{
+    animation-play-state: paused;
+}
+
+.play-animation
+{
+    animation-play-state: running;
 }
 
 
