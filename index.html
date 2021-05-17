@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='icon' href='res/edu_icon.svg' type='image/svg'/>
+    <link href="lib/splide.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Manrope" rel="stylesheet">
-    <script src="lib/animationTrigger.js" defer></script> 
+    <script src="lib/animationTrigger.js" defer></script>
+    <script src="lib/splide.min.js"></script> 
+    <script>
+        // Setting and binding carousels
+        document.addEventListener( 'DOMContentLoaded', function () {
+            let settings = {
+                focus: 'center',
+                gap: '10%',
+                throttle: 500,
+                destroy: true,
+                breakpoints: {
+                    836: {
+                        destroy: false,
+                    }
+                },
+                classes: {
+                    arrow: 'display-none',
+                    page: 'splide__pagination__page carousel-pagination-button'
+                }
+            }
+            
+            new Splide( '.section-7-carousel', settings).mount();
+            new Splide( '.section-8-carousel', settings).mount();
+        } );
+    </script>
     <title>Edukraftas</title>
 </head>
 <body>
@@ -242,34 +267,36 @@
         <section class="section-7 bg-light-darken">
             <img class="section-icon" src="img/trophy.png" alt="">
             <h2>Mūsų pasiekimai</h2>
-            <div class="section-7-body">
-                <!-- TODO: Update spacing for different width desktop -->
-                <!-- TODO: Carousel... Well this is going to annoy me -->
-                <div class="section-7-body-item">
-                    <div class="section-7-body-item-img card bg-light">
-                        <img src="img/brand_rfc.png" alt="">
-                    </div>
-                    <div class="section-7-body-item-text">
-                        <h3>Reach for Change</h3>
-                        <p>Socialinio verslo konkurso pirmos vietos laimėtojas 2019m.</p>
-                    </div>
-                </div>
-                <div class="section-7-body-item">
-                    <div class="section-7-body-item-img card bg-light">
-                        <img src="img/brand_ms.jpg" alt="">
-                    </div>
-                    <div class="section-7-body-item-text">
-                        <h3>Microsoft in Education Global Training Partner</h3>
-                        <p>Sertifikuotas “Microsoft” partneris</p>
-                    </div>
-                </div>
-                <div class="section-7-body-item">
-                    <div class="section-7-body-item-img card bg-light">
-                        <img src="img/brand_nk.png" alt="">
-                    </div>
-                    <div class="section-7-body-item-text">
-                        <h3>Naujasis Knygnešys</h3>
-                        <p>Švietimo kategorijos laimėtojas 2020m.</p>
+            <div class="section-7-carousel splide">
+                <div class="splide__track">
+                    <div class="section-7-body splide__list">
+                        <div class="section-7-body-item splide__slide">
+                            <div class="section-7-body-item-img card bg-light">
+                                <img src="img/brand_rfc.png" alt="">
+                            </div>
+                            <div class="section-7-body-item-text">
+                                <h3>Reach for Change</h3>
+                                <p>Socialinio verslo konkurso pirmos vietos laimėtojas 2019m.</p>
+                            </div>
+                        </div>
+                        <div class="section-7-body-item splide__slide">
+                            <div class="section-7-body-item-img card bg-light">
+                                <img src="img/brand_ms.jpg" alt="">
+                            </div>
+                            <div class="section-7-body-item-text">
+                                <h3>Microsoft in Education Global Training Partner</h3>
+                                <p>Sertifikuotas “Microsoft” partneris</p>
+                            </div>
+                        </div>
+                        <div class="section-7-body-item splide__slide">
+                            <div class="section-7-body-item-img card bg-light">
+                                <img src="img/brand_nk.png" alt="">
+                            </div>
+                            <div class="section-7-body-item-text">
+                                <h3>Naujasis Knygnešys</h3>
+                                <p>Švietimo kategorijos laimėtojas 2020m.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -279,55 +306,58 @@
                 <img class="section-icon" src="img/certificate.png" alt="">
                 <h2>Atsiliepimai</h2>
             </div>      
-            <div class="section-8-body">
-                <!-- Carousel... Well this is going to annoy me -->
-                <div class="section-8-body-item">
-                    <div class="section-8-body-item-card bg-light">
-                        <p class="section-8-body-item-card-text">“Edukraftas - edukacinė platforma mokiniams ir ne tik. Tai įtraukianti kelionė, kurioje kaskart atrandi kažką naujo. Labai linksma!”</p>
-                        <div class="section-8-body-item-pointer"></div>
-                    </div>
-                    <div class="section-8-body-item-body">
-                        <div class="section-8-body-item-body-img">
-                            <img src="img/jelena.png" alt="">
+            <div class="section-8-carousel splide">
+                <div class="splide__track">
+                    <div class="section-8-body splide__list">
+                        <div class="section-8-body-item splide__slide">
+                            <div class="section-8-body-item-card bg-light">
+                                <p class="section-8-body-item-card-text">“Edukraftas - edukacinė platforma mokiniams ir ne tik. Tai įtraukianti kelionė, kurioje kaskart atrandi kažką naujo. Labai linksma!”</p>
+                                <div class="section-8-body-item-pointer"></div>
+                            </div>
+                            <div class="section-8-body-item-body">
+                                <div class="section-8-body-item-body-img">
+                                    <img src="img/jelena.png" alt="">
+                                </div>
+                                <div class="section-8-body-item-body-text">
+                                    <h5>Jelena Baliajeva</h5>
+                                    <p>Vilniaus “Santaros” gimnazijos direktorė</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="section-8-body-item-body-text">
-                            <h5>Jelena Baliajeva</h5>
-                            <p>Vilniaus “Santaros” gimnazijos direktorė</p>
+                        <div class="section-8-body-item splide__slide">
+                            <div class="section-8-body-item-card bg-light">
+                                <p class="section-8-body-item-card-text">“Geros mokyklos koncepcijoje yra kalbama apie nuotykius mokykloje. Ar negali žaidimas būti pagrindu siekiant akademinių rezultatų?”</p>
+                                <div class="section-8-body-item-pointer"></div>
+                            </div>
+                            <div class="section-8-body-item-body">
+                                <div class="section-8-body-item-body-img">
+                                    <img src="img/vaidas.png" alt="">
+                                </div>
+                                <div class="section-8-body-item-body-text">
+                                    <h5>Vaidas Bacys</h5>
+                                    <p>Šiaulių r. Dubysos aukštupio mokyklos direktorius</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="section-8-body-item">
-                    <div class="section-8-body-item-card bg-light">
-                        <p class="section-8-body-item-card-text">“Geros mokyklos koncepcijoje yra kalbama apie nuotykius mokykloje. Ar negali žaidimas būti pagrindu siekiant akademinių rezultatų?”</p>
-                        <div class="section-8-body-item-pointer"></div>
-                    </div>
-                    <div class="section-8-body-item-body">
-                        <div class="section-8-body-item-body-img">
-                            <img src="img/vaidas.png" alt="">
-                        </div>
-                        <div class="section-8-body-item-body-text">
-                            <h5>Vaidas Bacys</h5>
-                            <p>Šiaulių r. Dubysos aukštupio mokyklos direktorius</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-8-body-item">
-                    <div class="section-8-body-item-card bg-light">
-                        <p class="section-8-body-item-card-text">“Patirti nuotykiai ar įveiktos problemos suartina, sukuria bendras patirtis. Be to, turint bendrą tikslą išmokti visiems, auga mokinių atsakomybė už savo mokymąsi.”</p>
-                        <div class="section-8-body-item-pointer"></div>
-                    </div>
-                    <div class="section-8-body-item-body">
-                        <div class="section-8-body-item-body-img">
-                            <img src="img/giedre.png" alt="">
-                        </div>
-                        <div class="section-8-body-item-body-text">
-                            <h5>Giedrė Slivko</h5>
-                            <p>Vilniaus tarptautinė mokykla</p>
+                        <div class="section-8-body-item splide__slide">
+                            <div class="section-8-body-item-card bg-light">
+                                <p class="section-8-body-item-card-text">“Patirti nuotykiai ar įveiktos problemos suartina, sukuria bendras patirtis. Be to, turint bendrą tikslą išmokti visiems, auga mokinių atsakomybė už savo mokymąsi.”</p>
+                                <div class="section-8-body-item-pointer"></div>
+                            </div>
+                            <div class="section-8-body-item-body">
+                                <div class="section-8-body-item-body-img">
+                                    <img src="img/giedre.png" alt="">
+                                </div>
+                                <div class="section-8-body-item-body-text">
+                                    <h5>Giedrė Slivko</h5>
+                                    <p>Vilniaus tarptautinė mokykla</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
         <section class="section-9">
             <div class="section-9-head">
                 <h2>Lankstūs apmokėjimo būdai</h2>
